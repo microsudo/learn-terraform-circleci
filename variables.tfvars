@@ -1,4 +1,4 @@
 region = "us-east-1"
 user = "circleci-user"
-label = "hashicorp.fun"
+label = "microstack.hashicorp.fun"
 app = "terramino"

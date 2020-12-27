@@ -6,12 +6,16 @@ terraform {
   }
 }
 
+provider "aws" {
+  region                  = "us-east-1"
+  profile                 = "microstack-learner"
+}
 resource "random_uuid" "randomid" {}
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "${random_uuid.randomid.result}-backend"
   # Enable versioning so we can see the full revision history of our
-  # state files
+  # state filesterraform update
   force_destroy = true
   versioning {
     enabled = true
